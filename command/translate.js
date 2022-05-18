@@ -96,7 +96,7 @@ module.exports = {
 						embeds: [new MessageEmbed()
 							.setColor('#FFFFFF')
 							.setTitle('翻訳')
-							.setAuthor({ name: '橋風景系翻訳', iconURL: client.user.avatarURL() })
+							.setAuthor({ name: client.user.username , iconURL: client.user.avatarURL() })
 							.setDescription(`原文:${text}\n原文の言語:${lang}\n翻訳文章:${trans}\n翻訳言語${target}`)]
 					})
 				})
