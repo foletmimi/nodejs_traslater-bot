@@ -1,7 +1,4 @@
 /config
 /node_modules
-<<<<<<< HEAD
 /.vs
-=======
->>>>>>> origin/master
 test.js
