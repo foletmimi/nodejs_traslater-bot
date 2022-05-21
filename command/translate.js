@@ -1,9 +1,7 @@
-﻿const { SlashCommandBuilder } = require('@discordjs/builders');
+const { SlashCommandBuilder } = require('@discordjs/builders');
 const { deepl } = require('../config/config.json');
 const axios = require('axios');
 const { MessageEmbed, message } = require('discord.js');
-
-
 
 //以下翻訳部分処理
 module.exports = {
@@ -78,28 +76,38 @@ module.exports = {
 			}).addChoices({
 				name: '中国語',
 				value: 'ZH'
-			})
-		),
+			}))
+	  .addStringOption(option => option.setName('翻訳結果のみ').setDescription('翻訳結果のみほしい場合').addChoices({
+			name: '有効',
+			value: 'true'
+		})),
 	async execute(interaction) {
 		const text = interaction.options.getString('文章')
 		const target = interaction.options.getString('言語')
-		{
-			axios.post('https://api-free.deepl.com/v2/translate?' +
-				'auth_key=' + `${deepl}` + '&' +
-				'text=' + encodeURI(`${text}`) + '&' +
-				'target_lang=' + `${target}`)
-				.then(response => {
-					const lang = response.data.translations[0].detected_source_language
-					const trans = response.data.translations[0].text
+		const result = interaction.options.getString('翻訳結果のみ')
+		axios.post('https://api-free.deepl.com/v2/translate?' +
+			 'auth_key=' + `${deepl}` + '&' +
+			 'text=' + encodeURIComponent(`${text}`) + '&' +
+			 'target_lang=' + `${target}`)
+			 .then(response => {
+				 const lang = response.data.translations[0].detected_source_language
+				 const trans = response.data.translations[0].text
+		if ( result === null) {
 					//応答部分||埋め込み
-					interaction.reply({
+					 interaction.reply({
 						embeds: [new MessageEmbed()
 							.setColor('#FFFFFF')
 							.setTitle('翻訳')
 							.setAuthor({ name: client.user.username , iconURL: client.user.avatarURL() })
 							.setDescription(`原文:${text}\n原文の言語:${lang}\n翻訳文章:${trans}\n翻訳言語${target}`)]
+						})} else (interaction.reply({
+								embeds: [new MessageEmbed()
+									.setColor('#FFFFFF')
+									.setTitle('翻訳')
+									.setAuthor({ name: client.user.username , iconURL: client.user.avatarURL() })
+									.setDescription(`翻訳文章:${trans}\n翻訳言語${target}`)]
 					})
-				})
-		}
-	}
+				)
+		})
+}
 }
