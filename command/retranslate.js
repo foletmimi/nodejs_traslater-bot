@@ -181,7 +181,7 @@ module.exports = {
                        .setColor('#FFFFFF')
                        .setTitle('再翻訳')
                        .setAuthor({ name: client.user.username , iconURL: client.user.avatarURL() })
-                       .setDescription(`文章:${retrans}\n言語${target}`)]
+                       .setDescription(`文章:${retrans}\n言語${relang}`)]
                  })
               })
 				})
