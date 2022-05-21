@@ -63,7 +63,7 @@ module.exports = {
 				value: 'RO'
 			}).addChoices({
 				name: 'ロシア語',
-				value: 'RO'
+				value: 'RU'
 			}).addChoices({
 				name: 'スロバキア語',
 				value: 'SK'
