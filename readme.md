@@ -5,6 +5,7 @@
 - node v16.13.0
 - npm v8.3.1
 - atom v1.60.0
+- Windows11
 
 # botのセットアップ
 configフォルダ内にあるconfig.jsonの中に必要な部分を入力。
