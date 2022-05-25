@@ -5,6 +5,6 @@ module.exports = {
 		.setName('server')
 		.setDescription('サバの情報'),
 	async execute(interaction) {
-		return interaction.reply('`サーバーの名前: ${interaction.guild.name}\n メンバー数:${interaction.guild.memberCount}`');
+		return interaction.reply(`サーバーの名前: ${interaction.guild.name}\n メンバー数:${interaction.guild.memberCount}`);
 	},
 };
