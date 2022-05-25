@@ -1,6 +1,13 @@
 {
+<<<<<<< HEAD
   "token": "OTc0OTk3OTMwMDM5NzEzODYz.GU-A_k.EmzsvKcSnOiUO9iwYpJixONR8dMi4nl4oL3lK0",
   "deepl": "d8d1adb6-dc0c-8800-9638-1db76546169f:fx",
   "clientId": "974997930039713863",
   "guildId": "461445416723021824"
+=======
+  "token": "Token", //botのtokenを入力
+  "deepl": "DeepLAPI", //DeepLのAPIを入力
+  "clientId": "クライアントのIDを入力", //botのクライアントIDを入れる
+  "guildId": "ギルドIDを入力" //すでにbotが導入されてる場合、addslashcommandを用いて追加するため
+>>>>>>> 3325eb916809953b56311141d4e600a727a7b183
 }

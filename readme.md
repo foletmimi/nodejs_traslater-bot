@@ -5,6 +5,7 @@
 - node v16.13.0
 - npm v8.3.1
 - atom v1.60.0
+- Windows11
 
 # botのセットアップ
 configフォルダ内にあるconfig.jsonの中に必要な部分を入力。
@@ -12,6 +13,14 @@ configフォルダ内にあるconfig.jsonの中に必要な部分を入力。
 npm install
 ```
 でモジュールのインストールをしてセットアップは終了です。
+
+# Googleの翻訳を使用するための準備
+https://qiita.com/tanabee/items/c79c5c28ba0537112922
+で翻訳のスクリプトを作成してcommandのgtransとgretransの
+```
+fetch(`?text=${text}&source=${source}&target=${target}`)
+```
+の?の前にに書き込む
 
 # 起動方法
 ```
@@ -26,6 +35,7 @@ node index.js
 # コマンド
 すべてスラッシュコマンドとなっています。
 ping users serverはドキュメントみて作ったのを置いたままにしてあるだけですので気にしないでください。
+helpコマンドを追加しました。そちらをご確認ください。
 
 # 使用時の注意
 このbotはDeepLの無料APIで動作するように作られています。有料プランをご使用の場合はcommand/translate.jsの
