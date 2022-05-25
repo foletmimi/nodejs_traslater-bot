@@ -14,6 +14,10 @@ npm install
 ```
 でモジュールのインストールをしてセットアップは終了です。
 
+# Googleの翻訳を使用するための準備
+https://qiita.com/tanabee/items/c79c5c28ba0537112922
+で翻訳のスクリプトを作成してconfig.jsonに書き込む
+
 # 起動方法
 ```
 npm start
