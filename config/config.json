@@ -2,6 +2,5 @@
   "token": "Token", //botのtokenを入力
   "deepl": "DeepLAPI", //DeepLのAPIを入力
   "clientId": "クライアントのIDを入力", //botのクライアントIDを入れる
-  "guildId": "ギルドIDを入力", //すでにbotが導入されてる場合、addslashcommandを用いて追加するため
-  "google_scriptURL": "Googlescriptappで作成したものをここに追加" //https://qiita.com/tanabee/items/c79c5c28ba0537112922をみてつくったURL
+  "guildId": "ギルドIDを入力" //すでにbotが導入されてる場合、addslashcommandを用いて追加するため
 }
