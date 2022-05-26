@@ -2,5 +2,6 @@
   "token": "Token", //botのtokenを入力
   "deepl": "DeepLAPI", //DeepLのAPIを入力
   "clientId": "クライアントのIDを入力", //botのクライアントIDを入れる
-  "guildId": "ギルドIDを入力" //すでにbotが導入されてる場合、addslashcommandを用いて追加するため
+  "guildId": "ギルドIDを入力", //すでにbotが導入されてる場合、addslashcommandを用いて追加するため
+  "googletransURL": "スクリプトURL入力" //readmeを確認
 }
