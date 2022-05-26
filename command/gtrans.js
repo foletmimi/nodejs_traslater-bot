@@ -1,5 +1,6 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const fetch = require('node-fetch');
+const { googletransURL } = require('../config/config.json');
 const { MessageEmbed, message } = require('discord.js');
 
 //以下翻訳部分処理
@@ -136,13 +137,16 @@ module.exports = {
             name: '中国語(繁体)',
             value: 'zh-TW'
     			}))
-					.addStringOption( option => option.setName("翻訳結果のみ").setDescription("翻訳結果のみほしい場合(2000文字超える際にも使用)")),
+					.addStringOption( option => option.setName("翻訳結果のみ").setDescription("翻訳結果のみほしい場合(2000文字超える際にも使用)").addChoices({
+            name: '有効',
+            value: 'true'
+    			})),
   async execute(interaction) {
     const text = interaction.options.getString('文章')
     const target = interaction.options.getString('翻訳言語')
     const source = interaction.options.getString('元言語')
     const result = interaction.options.getString('翻訳結果のみ')
-    fetch(`?text=${text}&source=${source}&target=${target}`)
+    fetch(`${googletransURL}?text=${text}&source=${source}&target=${target}`)
     .then( res => res.text() )
     .then( body => {
       const trans = body

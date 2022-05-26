@@ -1,6 +1,7 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const fetch = require('node-fetch');
 const { MessageEmbed, message } = require('discord.js');
+const { googletransURL } = require('../config/config.json');
 
 //以下翻訳部分処理
 module.exports = {
@@ -141,7 +142,7 @@ module.exports = {
     const target = interaction.options.getString('翻訳言語')
     const source = interaction.options.getString('元言語')
     const result = interaction.options.getString('翻訳結果のみ')
-    fetch(`?text=${text}&source=${source}&target=${target}`)
+    fetch(`${googletransURL}?text=${text}&source=${source}&target=${target}`)
     .then( res => res.text() )
     .then( body => {
       const trans = body
@@ -152,7 +153,7 @@ module.exports = {
           .setAuthor({ name: client.user.username , iconURL: client.user.avatarURL() })
           .setDescription(`原文:${text}\n原文の言語:${source}\n翻訳文章:${trans}\n翻訳言語${target}`)]
         })
-        fetch(`?text=${trans}&source=${target}&target=${source}`)
+        fetch(`${googletransURL}?text=${trans}&source=${target}&target=${source}`)
         .then( res => res.text() )
         .then( body => {
           const retrans = body
