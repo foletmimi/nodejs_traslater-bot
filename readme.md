@@ -16,11 +16,7 @@ npm install
 
 # Googleの翻訳を使用するための準備
 https://qiita.com/tanabee/items/c79c5c28ba0537112922
-で翻訳のスクリプトを作成してcommandのgtransとgretransの
-```
-fetch(`?text=${text}&source=${source}&target=${target}`)
-```
-の?の前にに書き込む
+で翻訳のスクリプトを作成してconfig.jsonのgoogletransURLに入力
 
 # 起動方法
 ```
