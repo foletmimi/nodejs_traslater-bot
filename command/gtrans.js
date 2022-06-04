@@ -77,7 +77,7 @@ module.exports = {
         		name: '日本語',
       			value: 'ja'
       			}).addChoices({
-    				name: 'アメリカ英語',
+    				name: '英語',
     				value: 'en'
       			}).addChoices({
     				name: 'ブルガリア語',
