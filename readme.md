@@ -15,7 +15,7 @@ npm install
 でモジュールのインストールをしてセットアップは終了です。
 
 # Googleの翻訳を使用するための準備
-https://qiita.com/tanabee/items/c79c5c28ba0537112922
+https://qiita.com/tanabee/items/c79c5c28ba0537112922  
 で翻訳のスクリプトを作成してconfig.jsonのgoogletransURLに入力
 
 # 起動方法
@@ -29,8 +29,8 @@ node index.js
 で起動してください。
 
 # コマンド
-すべてスラッシュコマンドとなっています。
-ping users serverはドキュメントみて作ったのを置いたままにしてあるだけですので気にしないでください。
+すべてスラッシュコマンドとなっています。  
+ping users serverはドキュメントみて作ったのを置いたままにしてあるだけですので気にしないでください。  
 helpコマンドを追加しました。そちらをご確認ください。
 
 # 使用時の注意
